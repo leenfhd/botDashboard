@@ -1,0 +1,1 @@
+console.log(`typescropt is done`);
