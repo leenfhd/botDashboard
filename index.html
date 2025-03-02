@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="src/main.ts" defer></script>
+    <title>Bot Detection Analysis</title>
+    <link rel="stylesheet" href="./src/styles/styles.css" />
+    
+  </head>
+
+  <body>
+    
+    <div id="app">
+      <header class="myHeader"><h3>Bot Detection</h3></header>
+      
+      <div style="height: 10px"></div>
+
+      <div id="jsonUploadingArea">
+        <input type="file" id="jsonPicker" class="hidden-input" accept=".json">
+        <label for="jsonPicker" id="fileLabel">Choose a JSON</label>
+        <button id="deleteFile">delete file</button>
+      </div>
+
+     
+       
+      <div class="stat-container">
+        <ul>
+          <li>Total Sites <span id="totalSites"></span></li>
+          <li>Static Files <span id="staticFiles"></span></li>
+          <li>Error Sites <span id="errorSites"></span></li>
+          <li>Sites with Captcha <span id="sitesWithCaptcha"></span></li>
+          <li>Sites with Blocking Captcha <span id="sitesWithBlockingCaptcha"></span></li>
+        </ul>
+      </div>
+       <div class="charts-container"> 
+        <canvas id="myLineChart"></canvas>
+        <canvas id="myChart"> </canvas>
+        <canvas id="myBarChart"></canvas>
+         
+       </div>
+       <div class="search-container">
+        <button id="displaySearch"></button>
+        <input type="text" id="myInput" placeholder="Search" />
+      </div>
+      <div class="grid-container">
+        <div class="grid-row">
+          <div class="grid-cell header">URL</div>
+          <div class="grid-cell header">Run ID</div>
+          <div class="grid-cell header">Status</div>
+        </div>
+        <div id="output"></div>
+      </div>
+    </div>
+  </body>
+</html>
